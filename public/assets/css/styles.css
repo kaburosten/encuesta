@@ -1,0 +1,15 @@
+#wrap{
+	background-image: url(/assets/img/fondo.jpg);
+}
+
+.container{
+	background-color: white;
+}
+
+.form{
+	margin-left: 60px;
+}
+
+.button{
+	float: right;
+}

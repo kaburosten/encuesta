@@ -29,7 +29,7 @@ class Client_InquestController extends \BaseController {
 	 */
 	public function store()
 	{
-		//
+		return Input::all();
 	}
 
 	/**

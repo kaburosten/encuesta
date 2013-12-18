@@ -7,7 +7,7 @@
 {{ Form::open (array('route' => 'client.inquest.store', 'method' => 'POST'), array('role' => 'form')) }}
 	<div class="row"><h1>Encuesta De Alumnos</h1></div>
 		<br>
-	<div class="form-group col-md-7">
+	<div class="form-group col-md-9">
 		    <legend>Cual fue la razon de que abandonaras lass clases?</legend>
 		    <label class="radio">
 					{{ Form::radio('question1', '1') }}
@@ -23,7 +23,7 @@
 			</label>
 	</div>
 
-	<div class="form-group form-inline col-md-7">
+	<div class="form-group form-inline col-md-9">
 			<legend>Continuarás en el futuro cercano?</legend>
 			<label class="radio">
 					{{ Form::radio('question2', '1') }}
@@ -179,7 +179,13 @@
 			<br><br>
 			<legend>Tienes algun motivo diferente para abandonar los estudios, describelo?</legend>
 			{{ Form::text('question17', null, array('class' => 'form-control', 'placeholder' => 'Describe tu motivo', 'rows' => '3'))}}
+			<br><br>
 	</div>
+
+	<div class="row col-md-9 button">
+		{{ Form::button('Enviar', array('type' => 'submit', 'class' => 'btn btn-primary')) }}
+	</div>
+	
 {{ Form::close() }}
 
 @stop
