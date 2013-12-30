@@ -11,26 +11,26 @@ class CreateEncuestaTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('encuesta', function($table)
+		Schema::create('form', function($table)
 		{
 			$table->increments('id');
-			$table->integer('1');
-			$table->boolean('2');
-			$table->boolean('3');
-			$table->boolean('4');
-			$table->boolean('5');
-			$table->boolean('6');
-			$table->boolean('7');
-			$table->boolean('8');
-			$table->string('9');
-			$table->boolean('10');
-			$table->boolean('11');
-			$table->boolean('12');
-			$table->boolean('13');
-			$table->boolean('14');
-			$table->boolean('15');
-			$table->boolean('16');
-			$table->string('17');
+			$table->integer('q1');
+			$table->boolean('q2');
+			$table->boolean('q3');
+			$table->boolean('q4');
+			$table->boolean('q5');
+			$table->boolean('q6');
+			$table->boolean('q7');
+			$table->boolean('q8');
+			$table->integer('q9');
+			$table->boolean('q10');
+			$table->boolean('q11');
+			$table->boolean('q12');
+			$table->boolean('q13');
+			$table->boolean('q14');
+			$table->boolean('q15');
+			$table->boolean('q16');
+			$table->string('q17');
 			$table->timestamps();
 		});
 	}
@@ -42,7 +42,7 @@ class CreateEncuestaTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('encuesta');
+		Schema::drop('form');
 	}
 
 }

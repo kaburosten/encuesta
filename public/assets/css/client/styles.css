@@ -1,5 +1,5 @@
 #wrap{
-	background-image: url(/assets/img/fondo.jpg);
+	background-color: #222222;
 }
 
 .container{
@@ -15,9 +15,10 @@
 }
 
 .radio{
-	margin-right: 15px;
+	margin-right: 25px;
 }
 
-.horis{
-	margin-bottom: 18px;
+.button{
+	margin-top: 20px;
+	margin-bottom: 30px;
 }

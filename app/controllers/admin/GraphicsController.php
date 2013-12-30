@@ -1,6 +1,6 @@
 <?php
 
-class Client_InquestController extends \BaseController {
+class Admin_GraphicsController extends \BaseController {
 
 	/**
 	 * Display a listing of the resource.
@@ -9,7 +9,7 @@ class Client_InquestController extends \BaseController {
 	 */
 	public function index()
 	{
-		return 'esto debe estar vacio';
+		//
 	}
 
 	/**
@@ -19,7 +19,7 @@ class Client_InquestController extends \BaseController {
 	 */
 	public function create()
 	{
-		return View::make('client/inquest/form');
+		//
 	}
 
 	/**
@@ -29,18 +29,7 @@ class Client_InquestController extends \BaseController {
 	 */
 	public function store()
 	{
-		$inquest = new Inquest;
-		$data = Input::all();
-		if ($inquest->isValid($data))
-		{
-			$inquest->fill($data);
-			$inquest->save();
-			return Redirect::route('client.inquest.show', array($inquest->id));
-		}
-		else
-		{
-			return Redirect::route('client.inquest.create')->withInput()->withErrors($inquest->errors);
-		}
+		//
 	}
 
 	/**
@@ -51,7 +40,7 @@ class Client_InquestController extends \BaseController {
 	 */
 	public function show($id)
 	{
-		return 'aqui los agradecimientos'. $id;
+		//
 	}
 
 	/**
