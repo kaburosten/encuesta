@@ -130,11 +130,7 @@
     <!-- Estos scripts son del layout -->
     {{ HTML::script('assets/js/jquery-1.10.2.js')}}
     {{ HTML::script('assets/js/bootstrap.min.js') }}
-    {{ HTML::script('assets/js/raphael-min.js') }}
-    {{ HTML::script('assets/js/morris-0.4.3.min.js') }}
-  <!--   {{ HTML::script('assets/js/morris/chart-data-morris.js') }} -->
-    {{ HTML::script('assets/js/tablesorter/jquery.tablesorter.js') }}
-    {{ HTML::script('assets/js/tablesorter/tables.js') }}
+    {{ HTML::script('assets/js/highcharts/js/highcharts.js') }}
     {{ HTML::script('assets/js/graphics.js') }}
 
   </body>

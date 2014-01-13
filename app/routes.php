@@ -32,8 +32,11 @@ Route::get('/', function()
 	return View::make('hello');
 });
 
-Route::any('data/graphics', function()
+Route::any('admin/data/graphics', function()
 {
+	//echo 'hola';
+	$variableX= DB::table('form')->select(DB::raw('count(q1) as total, q1 as opcion'))->groupBy('q1')->get();
+	//$variableX->deserted('2013B');
 	$data= array
 	(
 		'0'=>array('y'=>'2013-01', 'a'=> 100),
@@ -45,5 +48,6 @@ Route::any('data/graphics', function()
 		'6'=>array('y'=>'2013-07', 'a'=> 100)
 	);
 	/*return View::make('admin/graphics/graphics')->with('menu', $menuActive);*/
-	return json_encode($data);
+	/*return json_encode($data);*/
+	return json_encode($variableX);
 });
