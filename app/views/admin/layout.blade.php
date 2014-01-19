@@ -35,27 +35,14 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse navbar-ex1-collapse">
           <ul class="nav navbar-nav side-nav">
-            <li {{$menu['dashboard']}}><a href="{{url('/admin/dashboard')}}"><i class="fa fa-dashboard"></i> Dashboard</a></li>
-            <li {{$menu['graphics']}}><a href="{{url('/admin/graphics')}}"><i class="fa fa-bar-chart-o"></i> Graficas</a></li>
-            <li {{$menu['users']}}><a href="{{url('admin/users')}}"><i class="fa fa-table"></i> Usuarios</a></li>
-            <li><a href="forms.html"><i class="fa fa-edit"></i> Forms</a></li>
-            <li><a href="typography.html"><i class="fa fa-font"></i> Typography</a></li>
-            <li><a href="bootstrap-elements.html"><i class="fa fa-desktop"></i> Bootstrap Elements</a></li>
-            <li><a href="bootstrap-grid.html"><i class="fa fa-wrench"></i> Bootstrap Grid</a></li>
-            <li><a href="blank-page.html"><i class="fa fa-file"></i> Blank Page</a></li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-caret-square-o-down"></i> Dropdown <b class="caret"></b></a>
-              <ul class="dropdown-menu">
-                <li><a href="#">Dropdown Item</a></li>
-                <li><a href="#">Another Item</a></li>
-                <li><a href="#">Third Item</a></li>
-                <li><a href="#">Last Item</a></li>
-              </ul>
-            </li>
+            {{HTML::active_link('admin/dashboard','<i class="fa fa-dashboard"></i> Dashboard')}}
+            {{HTML::active_link('admin/graphics','<i class="fa fa-bar-chart-o"></i> Gráficas')}}
+            {{HTML::active_link('admin/users','<i class="fa fa-user"></i> Usuarios')}}
+             {{HTML::active_link('admin/alumnos','<i class="fa fa-user"></i> Alumnnos')}}
           </ul>
 
           <ul class="nav navbar-nav navbar-right navbar-user">
-            <li class="dropdown messages-dropdown">
+            <!-- <li class="dropdown messages-dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-envelope"></i> Messages <span class="badge">7</span> <b class="caret"></b></a>
               <ul class="dropdown-menu">
                 <li class="dropdown-header">7 New Messages</li>
@@ -88,7 +75,7 @@
                 <li class="divider"></li>
                 <li><a href="#">View Inbox <span class="badge">7</span></a></li>
               </ul>
-            </li>
+            </li> 
             <li class="dropdown alerts-dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bell"></i> Alerts <span class="badge">3</span> <b class="caret"></b></a>
               <ul class="dropdown-menu">
@@ -101,14 +88,14 @@
                 <li class="divider"></li>
                 <li><a href="#">View All</a></li>
               </ul>
-            </li>
+            </li>-->
             <li class="dropdown user-dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> John Smith <b class="caret"></b></a>
               <ul class="dropdown-menu">
-                <li><a href="#"><i class="fa fa-user"></i> Profile</a></li>
+                <!-- <li><a href="#"><i class="fa fa-user"></i> Profile</a></li>
                 <li><a href="#"><i class="fa fa-envelope"></i> Inbox <span class="badge">7</span></a></li>
                 <li><a href="#"><i class="fa fa-gear"></i> Settings</a></li>
-                <li class="divider"></li>
+                <li class="divider"></li> -->
                 <li><a href="#"><i class="fa fa-power-off"></i> Log Out</a></li>
               </ul>
             </li>
@@ -132,6 +119,7 @@
     {{ HTML::script('assets/js/bootstrap.min.js') }}
     {{ HTML::script('assets/js/highcharts/js/highcharts.js') }}
     {{ HTML::script('assets/js/graphics.js') }}
+    {{ HTML::script('assets/js/main.js') }}
 
   </body>
 </html>

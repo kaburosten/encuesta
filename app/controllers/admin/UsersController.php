@@ -9,9 +9,8 @@ class Admin_UsersController extends \BaseController {
 	 */
 	public function index()
 	{
-		$this->menuActive['users']='class="active"';
 		$users = User::all();
-        return View::make('admin/users/list')->with('users', $users)->with('menu', $this->menuActive);
+        return View::make('admin/users/list')->with('users', $users);
 	}
 
 	/**

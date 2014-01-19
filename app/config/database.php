@@ -57,7 +57,7 @@ return array(
 			'host'      => 'localhost',
 			'database'  => 'inquest',
 			'username'  => 'root',
-			'password'  => '',
+			'password'  => '08301281m',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',

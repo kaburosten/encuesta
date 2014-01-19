@@ -7,8 +7,7 @@ class BaseController extends Controller {
 	 *
 	 * @return void
 	 */
-	public $menuActive=array('dashboard' => '', 'graphics' => '', 'users' => '');
-
+	
 	protected function setupLayout()
 	{
 		if ( ! is_null($this->layout))
