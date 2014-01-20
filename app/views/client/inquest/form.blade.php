@@ -17,6 +17,7 @@
 @section ('content')
 
 {{ Form::open (array('route' => 'client.inquest.store', 'method' => 'POST'), array('role' => 'form')) }}
+	{{Form::hidden('alm_id',$alumno->id)}}
 	<div class="row"><h1>Encuesta De Alumnos</h1></div>
 		<br>
 	<div class="form-group col-md-9">

@@ -13,6 +13,8 @@
 
 Route::resource('client/inquest', 'Client_InquestController');
 
+Route::get('client/inquest/code/{code}', 'Client_InquestController@create');
+
 Route::resource('admin/users', 'Admin_UsersController');
 
 Route::post('admin/alumnos/email','Admin_AlumnosController@enviarMails');

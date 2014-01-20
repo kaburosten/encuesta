@@ -17,9 +17,15 @@ class Client_InquestController extends \BaseController {
 	 *
 	 * @return Response
 	 */
-	public function create()
+	public function create($code)
 	{
-		return View::make('client/inquest/form');
+		$alumno = Alumno::where('alm_code','=',$code)->where('alm_status','=','PENDIENTE')->get();
+		if($alumno->count() > 0){
+			return View::make('client/inquest/form')->with('alumno',$alumno[0]);	
+		}else{
+			return 'Usted ya contestó esta encuesta';
+		}
+		
 	}
 
 	/**
@@ -35,12 +41,13 @@ class Client_InquestController extends \BaseController {
 		{
 			$inquest->fill($data);
 			$inquest->save();
+			$alumno = Alumno::find(Input::get('alm_id'));
+			$alumno->alm_status = 'CONTESTADA';
+			$alumno->save();
 			return Redirect::route('client.inquest.show', array($inquest->id));
 		}
-		else
-		{
-			return Redirect::route('client.inquest.create')->withInput()->withErrors($inquest->errors);
-		}
+
+		return Redirect::route('client.inquest.create')->withInput()->withErrors($inquest->errors);
 	}
 
 	/**
