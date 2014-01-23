@@ -1,10 +1,10 @@
 var main = new function()
 {
-	this.init=function()
-	{
-	   	var that=this;
-	   	
-	}
+   this.init=function()
+   {
+         var that=this;
+         
+   }
 
     this.enviarMails = function(){
         
@@ -22,6 +22,6 @@ var main = new function()
         });
     }
 
-	
+   
 
 };

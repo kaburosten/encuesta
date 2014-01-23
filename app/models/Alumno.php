@@ -1,16 +1,16 @@
 <?php 
 class Alumno extends Eloquent{
-	
+   
     protected $table = 'alumnos';
 
     protected $fillable = array('alm_email','alm_fullname','alm_carrera','alm_materia','alm_genero','alm_maestro','alm_periodo','alm_code');
 
-	public $errors;
+   public $errors;
     
     public function isValid($data)
     {
         $rules = array(
-            'alm_email'	=> 'required|email|unique:alumnos',
+            'alm_email'   => 'required|email|unique:alumnos',
             'alm_fullname' => 'required',
             'alm_carrera' => 'required',
             'alm_materia' => 'required',

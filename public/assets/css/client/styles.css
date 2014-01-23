@@ -1,24 +1,24 @@
 #wrap{
-	background-color: #222222;
+   background-color: #222222;
 }
 
 .container{
-	background-image: url(/assets/img/fondo2.jpg);
+   background-image: url(/assets/img/fondo2.jpg);
 }
 
 .form{
-	margin-left: 60px;
+   margin-left: 60px;
 }
 
 .button{
-	float: right;
+   float: right;
 }
 
 .radio{
-	margin-right: 25px;
+   margin-right: 25px;
 }
 
 .button{
-	margin-top: 20px;
-	margin-bottom: 30px;
+   margin-top: 20px;
+   margin-bottom: 30px;
 }
