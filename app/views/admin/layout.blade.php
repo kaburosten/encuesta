@@ -9,6 +9,14 @@
     {{ HTML::style('assets/css/sb-admin.css', array('media' => 'screen')) }}
     {{ HTML::style('assets/font-awesome/css/font-awesome.min.css', array('media' => 'screen')) }}
     {{ HTML::style('assets/css/morris-0.4.3.min.css', array('media' => 'screen')) }}
+    {{ HTML::style('assets/css/jquery-ui-1.8.21.custom.css', array('media' => 'screen')) }}
+    {{ HTML::style('assets/css/jquery.tagit.css', array('media' => 'screen')) }}
+    {{ HTML::style('assets/css/tagit.ui-zendesk.css', array('media' => 'screen')) }}
+    <style>
+        ul .tagitl li{
+            background: #FFF !important;
+        }
+    </style>
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -119,7 +127,16 @@
     {{ HTML::script('assets/js/bootstrap.min.js') }}
     {{ HTML::script('assets/js/highcharts/js/highcharts.js') }}
     {{ HTML::script('assets/js/graphics.js') }}
+    {{ HTML::script('assets/js/jquery-ui-1.8.21.custom.min.js') }}
+    {{ HTML::script('assets/js/tag-it.min.js') }}
     {{ HTML::script('assets/js/main.js') }}
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('#alm_maestro').tagit({
+                allowSpaces:true
+            });
+        });
+    </script>
 
   </body>
 </html>

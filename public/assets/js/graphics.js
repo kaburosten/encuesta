@@ -162,7 +162,7 @@ var graphics = new function()
                     borderWidth: 0
                 }
             },
-            series: [{}]
+            series: []
         }
    /*data=[];*/
 

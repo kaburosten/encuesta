@@ -22,50 +22,54 @@
         </div>
     </form>
 </div>
+<div class="row">
+    <div class="col-lg-12">
+    <h1>Lista de alumnos</h1>
 
-<h1>Lista de alumnos</h1>
-  
-  <table class="table table-striped">
-    <thead>    
-        <tr>
-            <th>Email</th>
-            <th>Nombre</th>
-            <th>Género</th>
-            <th>Carrera</th>
-            <th>Materia</th>
-            <th>Maestro</th>
-            <th>Periodo</th>
-            <th></th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach ($alumnos as $alumno)
-        <tr>
-            <td>{{ $alumno->alm_email }}</td>
-            <td>{{ $alumno->alm_fullname }}</td>
-            <td>{{ $alumno->alm_genero }}</td>
-            <td>{{ $alumno->alm_carerra }}</td>
-            <td>{{ $alumno->alm_materia }}</td>
-            <td>{{ $alumno->alm_maestro }}</td>
-            <td>{{ $alumno->alm_periodo }}</td>
-            <td><span class="label {{ $alumno->alm_status == 'PENDIENTE' ? 'label-warning' : 'label-success' }}">{{$alumno->alm_status}}</span></td>
-            <td>
-                {{HTML::link(route('admin.alumnos.edit',$alumno->id), 'Editar', array('class' =>'btn btn-info'))}}
-            </td>
-            <td>
+      <table class="table table-striped">
+        <thead>    
+            <tr>
+                <th>Email</th>
+                <th>Nombre</th>
+                <th>Género</th>
+                <th>Carrera</th>
+                <th>Materia</th>
+                <th style="width: 200px !important;">Maestro</th>
+                <th>Periodo</th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach ($alumnos as $alumno)
+            <tr>
+                <td>{{ $alumno->alm_email }}</td>
+                <td>{{ $alumno->alm_fullname }}</td>
+                <td>{{ $alumno->alm_genero }}</td>
+                <td>{{ $alumno->alm_carerra }}</td>
+                <td><b>{{ '['.$alumno->alm_materia .']'}}</b> {{ $alumno->mat_nombre}}</td>
+                <td>{{ $alumno->alm_maestro }}</td>
+                <td>{{ $alumno->alm_periodo }}</td>
+                <td><span class="label {{ $alumno->alm_status == 'PENDIENTE' ? 'label-warning' : 'label-success' }}">{{$alumno->alm_status}}</span></td>
+                <td>
+                    {{HTML::link(route('admin.alumnos.edit',$alumno->id), 'Editar', array('class' =>'btn btn-info'))}}
+                </td>
+                <td>
 
-                {{ Form::model($alumno, array('route' => array('admin.alumnos.destroy', $alumno->id), 'method' => 'DELETE', 'role' => 'form')) }}
-                        {{ Form::submit('Eliminar', array('class' => 'btn btn-danger')) }}
-                {{ Form::close() }}
-            </td>
-        </tr>
-        @endforeach
-    </tbody>
-  </table>
-  {{$alumnos->links()}}
+                    {{ Form::model($alumno, array('route' => array('admin.alumnos.destroy', $alumno->id), 'method' => 'DELETE', 'role' => 'form')) }}
+                            {{ Form::submit('Eliminar', array('class' => 'btn btn-danger')) }}
+                    {{ Form::close() }}
+                </td>
+            </tr>
+            @endforeach
+        </tbody>
+      </table>
+      {{$alumnos->links()}}
 
-  {{HTML::link('admin/alumnos/create', 'Agrear', array('class' => 'btn btn-primary'));}}
+      {{HTML::link('admin/alumnos/create', 'Agrear', array('class' => 'btn btn-primary'));}}
+      </div>
+ 
+  </div>
 
 <script type="text/javascript">
     $(document).ready(function(){

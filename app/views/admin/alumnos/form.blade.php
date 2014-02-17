@@ -44,7 +44,7 @@ endif;
     </div>
     <div class="form-group col-md-4">
       {{ Form::label('alm_genero', 'Genero') }}<br>
-      {{ Form::select('alm_genero',array('MASCULINO' => 'MASCULINO', 'FEMENINO' => 'FEMENINO') ,array('class' => 'form-control')) }}
+      {{ Form::select('alm_genero',array('MASCULINO' => 'MASCULINO', 'FEMENINO' => 'FEMENINO') ,'',array('class' => 'form-control')) }}
     </div>
   </div>
   <div class="row">
@@ -54,14 +54,14 @@ endif;
     </div>
     <div class="form-group col-md-4">
       {{ Form::label('alm_materia', 'Materia') }}
-      {{ Form::text('alm_materia',null,array('class' => 'form-control')) }}
+      {{Form::select('alm_materia',$materias ,'',array('class' => 'form-control')) }}
     </div>
   </div>
   <div class="row">
    
-    <div class="form-group col-md-4">
+    <div class="form-group col-md-8">
       {{ Form::label('alm_maestro', 'Maestro') }}
-      {{ Form::text('alm_maestro', null,array('class' => 'form-control')) }}
+      {{ Form::text('alm_maestro', '',array('class' => 'form-control','id'=>'alm_maestro')) }}
     </div>
   </div>
   <div class="row">
