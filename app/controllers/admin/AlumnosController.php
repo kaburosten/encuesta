@@ -9,7 +9,7 @@ class Admin_AlumnosController extends \BaseController {
     */
    public function index()
    {
-      $alumnos = Alumno::leftjoin('materia', 'alm_materia', '=', 'materia.mat_clave')->paginate(10);
+      $alumnos = Alumno::paginate(10);
         return View::make('admin/alumnos/list')->with('alumnos', $alumnos);
    }
 
@@ -22,7 +22,7 @@ class Admin_AlumnosController extends \BaseController {
    {
         $alumno = new Alumno;
         $materias = DB::table('materia')->select(DB::raw('mat_clave, mat_nombre'))->orderBy('mat_clave','asc')->get();
-        $selectedMaterias = array('0'=>'Elegir materia');
+        $selectedMaterias = array('0'=>'Elegir materias');
 		foreach($materias as $materia) {
 			$selectedMaterias[$materia->mat_clave] = '['.$materia->mat_clave.'] '.$materia->mat_nombre;
 		}

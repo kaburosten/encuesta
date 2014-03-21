@@ -47,7 +47,7 @@
                 <td>{{ $alumno->alm_fullname }}</td>
                 <td>{{ $alumno->alm_genero }}</td>
                 <td>{{ $alumno->alm_carerra }}</td>
-                <td><b>{{ '['.$alumno->alm_materia .']'}}</b> {{ $alumno->mat_nombre}}</td>
+                <td>{{ $alumno->alm_materia}}</td>
                 <td>{{ $alumno->alm_maestro }}</td>
                 <td>{{ $alumno->alm_periodo }}</td>
                 <td><span class="label {{ $alumno->alm_status == 'PENDIENTE' ? 'label-warning' : 'label-success' }}">{{$alumno->alm_status}}</span></td>

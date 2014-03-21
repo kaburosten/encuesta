@@ -53,12 +53,17 @@ endif;
       {{ Form::text('alm_carrera',null, array('class' => 'form-control')) }}
     </div>
     <div class="form-group col-md-4">
-      {{ Form::label('alm_materia', 'Materia') }}
-      {{Form::select('alm_materia',$materias ,'',array('class' => 'form-control')) }}
+      {{ Form::label('alm_materia_select', 'Selecciona las materias') }}
+      {{Form::select('alm_materia_select',$materias ,'',array('class' => 'form-control','id' => 'alm_materia_select')) }}
     </div>
   </div>
   <div class="row">
-   
+    <div class="form-group col-md-8">
+      {{ Form::label('alm_materia', 'Materia') }}
+      {{ Form::text('alm_materia', '',array('class' => 'form-control','id'=>'alm_materia')) }}
+    </div>
+  </div>
+  <div class="row">
     <div class="form-group col-md-8">
       {{ Form::label('alm_maestro', 'Maestro') }}
       {{ Form::text('alm_maestro', '',array('class' => 'form-control','id'=>'alm_maestro')) }}

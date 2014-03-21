@@ -135,6 +135,15 @@
             $('#alm_maestro').tagit({
                 allowSpaces:true
             });
+            $('#alm_materia').tagit({
+                allowSpaces:true
+            });
+
+            $('#alm_materia_select').change(function(){
+              var val = $('#alm_materia_select option:selected').html();
+
+              $('#alm_materia').tagit("createTag", val);
+            })
         });
     </script>
 
